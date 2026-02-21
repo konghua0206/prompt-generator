@@ -1,220 +1,59 @@
-apron
-blouse
-camisole
-cardigan
-casual
-heart_cutout
-cat_cutout
-skirt_basket
-center_frills
-center_opening
-checkered_shirt
-clothes_between_breasts
-clothes_down
-t-shirt
-collared_blouse
-collared_shirt
-corset
-criss-cross_halter
-crop_top
-cropped_shirt
-cropped_vest
-dress
-dress_shirt
-faulds
-front-tie_top
-gathers
-gym_shirt
-high-waist_skirt
-virgin_killer_sweater
-open-chest_sweater
-hooded_sweater
-hooded_track_jacket
-hoodie
-jersey
-short_kimono
-kimono
-open_kimono
-obi
-kimono_lift
-kimono_pull
-kimono_skirt
-layered_dress
-layered_skirt
-load_bearing_vest
-lowleg
-maid_apron
-naked_apron
-off-shoulder_dress
-oversized_shirt
-sailor_shirt
-tank_top
-unbuttoned_shirt
-vest
-waist_apron
-wet_shirt
-armored_dress
-athletic_leotard
-babydoll
-backless_dress
-backless_outfit
-baseball_uniform
-biker_clothes
-bikesuit
-bikini_skirt
-bodysuit
-bodysuit_under_clothes
-bondage_outfit
-casual_one-piece_swimsuit
-collared_dress
-competition_school_swimsuit
-competition_swimsuit
-enmaided
-evening_gown
-dougi
-front_zipper_swimsuit
-gown
-gym_uniform
-halter_dress
-hanfu
-harem_outfit
-highleg_leotard
-impossible_bodysuit
-japanese_clothes
-kindergarten_uniform
-latex
-letterman_jacket
-living_clothes
-lolita_fashion
-loungewear
-meiji_schoolgirl_uniform
-military_uniform
-one-piece_swimsuit
-pajamas
-playboy_bunny_leotard
-police_uniform
-reverse_bunnysuit
-sailor
-sailor_senshi_uniform
-santa_costume
-school_uniform
-serafuku
-stile_uniform
-straitjacket
-uchikake
-varia_suit
-virgin_killer_outfit
-volleyball_uniform
-wedding_dress
-suit
-tuxedo
-formal_dress
-evening_gown
-canonicals
-cocktail_dress
-gown
-japanese_clothes
-kimono
-sleeveless_kimono
-short_kimono
-print_kimono
-furisode
-obi
-sash
-cheongsam
-china_dress
-print_cheongsam
-pelvic_curtain
-wedding_dress
-uchikake
-school_uniform 
-sailor
-serafuku
-serafuku
-summer_uniform
-kindergarten_uniform
-police_uniform
-naval_uniform
-military_uniform
-ss_uniform/nazi_uniform
-maid
-stile_uniform
-miko
-overalls
-business_suit
-nurse
-chef_uniform
-labcoat
-cheerleader
-band_uniform
-space_suit
-leotard
-domineering
-风格
-china_dress
-chinese_style
-traditional_clothes
-japanese_clothes
-hanten_(clothes)
-hanbok
-korean_clothes
-western
-german_clothes
-gothic
-lolita
-gothic_lolita
-byzantine_fashion
-Tropical
-indian_style
-Ao_Dai
-ainu_clothes
-arabian_clothes
-egyptian_clothes
-costume
-animal_costume
-bunny_costume
-adapted_costume
-cat_costume
-dog_costume
-bear_costume
-embellished_costume
-santa_costume
-halloween_costume
-kourindou_tengu_costume
-alternate_costume
-costume_switch
-meme_attire
-casual
-loungewear
-hoodie
-homewear
-pajamas
-nightgown
-sleepwear
-babydoll
-print_pajamas
-polka_dot_pajamas
-yukata
-chinese_clothes
-hanfu
-Taoist robe
-robe
-robe_of_blending
-cloak
-hooded_cloak
-winter_clothes
-down jacket
-santa
-harem_outfit
-shrug_(clothing)
-sportswear
-gym_uniform
-athletic_leotard
-volleyball_uniform
-tennis_uniform
-baseball_uniform
-letterman_jacket
-volleyball_uniform
-biker_clothes
-bikesuit
-wrestling_outfit
+mini dress  
+maxi dress  
+midi dress  
+A-line dress  
+bodycon dress  
+shift dress  
+sheath dress  
+wrap dress  
+shirt dress  
+slip dress  
+sweater dress  
+cocktail dress  
+little black dress  
+mermaid dress  
+empire waist dress  
+fit and flare dress  
+peplum dress  
+babydoll dress  
+blouson dress  
+caftan dress  
+tunic dress  
+halter dress  
+off-shoulder dress  
+one-shoulder dress  
+strapless dress  
+sundress  
+boho dress  
+denim dress  
+floral dress  
+lace dress  
+satin dress  
+velvet dress  
+sequin dress  
+ball gown  
+princess dress  
+pinafore dress  
+dirndl dress  
+kimono dress  
+kaftan dress  
+jumpsuit  
+romper  
+playsuit  
+wide-leg jumpsuit  
+straight-leg jumpsuit  
+palazzo jumpsuit  
+bodycon jumpsuit  
+utility jumpsuit  
+denim jumpsuit  
+silk jumpsuit  
+halter jumpsuit  
+off-shoulder jumpsuit  
+strapless jumpsuit  
+cropped jumpsuit  
+bell-bottom jumpsuit  
+overalls  
+bib overalls  
+unitard  
+onesie  
+catsuit  
