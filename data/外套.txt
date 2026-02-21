@@ -1,38 +1,72 @@
-blazer
-overcoat
-double-breasted
-long_coat
-haori
-winter_coat
-hooded_coat
-fur_coat
-fur-trimmed_coat
-duffel_coat
-fishnet_top
-parka
-fur-trimmed_coat
-jacket
-jacket_partially_removed
-jacket_removed
-open_jacket
-cropped_jacket
-track_jacket
-hooded_track_jacket
-military_jacket
-camouflage_jacket
-leather_jacket
-letterman_jacket
-bomber_jacket
-denim_jacket
-loating_jacket
-fur-trimmed_jacket
-two-tone_jacket
-trench_coat
-furisode
-trench_coat
-windbreaker
-raincoat
-hagoromo
-tunic
-cape
-capelet
+blazer  
+suit jacket  
+leather jacket  
+denim jacket  
+bomber jacket  
+varsity jacket  
+windbreaker  
+rain jacket  
+trench coat  
+pea coat  
+duffle coat  
+parka  
+puffer jacket  
+down jacket  
+quilted jacket  
+fleece jacket  
+hoodie jacket  
+zip-up hoodie  
+cardigan  
+oversized blazer  
+tailored blazer  
+cropped blazer  
+military jacket  
+field jacket  
+safari jacket  
+ Harrington jacket  
+track jacket  
+shell jacket  
+anorak  
+parkas with fur hood  
+shearling jacket  
+suede jacket  
+velvet blazer  
+tweed jacket  
+corduroy jacket  
+wool coat  
+cashmere coat  
+overcoat  
+topcoat  
+mac coat  
+duster coat  
+kimono jacket  
+haori  
+bolero jacket  
+shrug  
+cape jacket  
+poncho  
+wrap coat  
+trench with belt  
+double-breasted blazer  
+single-breasted blazer  
+peacoat with buttons  
+letterman jacket  
+racer jacket  
+biker jacket  
+moto jacket  
+flight jacket  
+MA-1 jacket  
+N-3B parka  
+snow jacket  
+ski jacket  
+softshell jacket  
+hybrid jacket  
+utility jacket  
+car coat  
+chesterfield coat  
+ulster coat  
+loden coat  
+frock coat  
+morning coat  
+tailcoat  
+tuxedo jacket  
