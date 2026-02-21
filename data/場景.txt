@@ -1,0 +1,103 @@
+living room  
+kitchen  
+bedroom  
+bathroom  
+dining room  
+office  
+classroom  
+lecture hall  
+library  
+cafe  
+coffee shop  
+restaurant  
+bar  
+nightclub  
+gym  
+yoga studio  
+swimming pool  
+beach  
+park  
+forest  
+mountain trail  
+rooftop  
+balcony  
+backyard  
+front porch  
+street market  
+shopping mall  
+supermarket  
+bookstore  
+museum  
+art gallery  
+concert hall  
+theater stage  
+cinema  
+hospital room  
+dentist clinic  
+pharmacy  
+train station  
+airport terminal  
+subway platform  
+bus stop  
+car interior  
+taxi backseat  
+airplane cabin  
+spaceship cockpit  
+futuristic city street  
+cyberpunk alley  
+medieval castle hall  
+ancient temple  
+Japanese shrine  
+tatami room  
+onsen bathhouse  
+izakaya  
+k-pop dance studio  
+recording studio  
+photo studio  
+fashion runway  
+boxing ring  
+football stadium  
+basketball court  
+tennis court  
+golf course  
+ice skating rink  
+ski slope  
+desert oasis  
+underwater coral reef  
+spaceship corridor  
+virtual reality room  
+abandoned warehouse  
+rooftop party  
+wedding venue  
+church interior  
+mosque courtyard  
+buddhist monastery  
+luxury hotel lobby  
+hostel dorm  
+camping tent  
+mountain cabin  
+treehouse  
+lighthouse interior  
+observatory dome  
+science laboratory  
+chemistry classroom  
+physics lecture hall  
+computer server room  
+data center  
+construction site  
+farm barn  
+vineyard  
+greenhouse  
+botanical garden  
+zoo enclosure  
+aquarium tank  
+pet shop  
+vintage arcade  
+bowling alley  
+karaoke room  
+escape room  
+haunted house  
+prison cell  
+courtroom  
+news studio  
+podcast room  
