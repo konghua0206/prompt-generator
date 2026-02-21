@@ -119,7 +119,7 @@ const NSFW_SHEET_NAME = "NSFW";
 
 // ===== 2) 工具函數 =====
 function csvUrl(sheetId, sheetName) {
-  return `https://docs.google.com/spreadsheets/d/${sheetId}/gviz/tq?tqx=out:csv&sheet=${encodeURIComponent(sheetName)}`;
+  return `https://docs.google.com/spreadsheets/d/${sheetId}/export?format=csv&sheet=${encodeURIComponent(sheetName)}`;
 }
 
 // 你已保證詞條不含逗號/引號，因此簡易 CSV 解析足夠
@@ -288,3 +288,4 @@ document.getElementById("btnNone").addEventListener("click", () => {
 </body>
 
 </html>
+
