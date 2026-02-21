@@ -125,7 +125,15 @@ function csvUrl(sheetId, sheetName) {
 // 你已保證詞條不含逗號/引號，因此簡易 CSV 解析足夠
 function parseCSV(csvText) {
   const lines = csvText.trim().split("\n").filter(Boolean);
-  const headers = lines[0].split(",").map(s => s.trim());
+
+  // 把表頭做標準化：去掉 BOM、去空白、轉小寫
+  const rawHeaders = lines[0].split(",").map(s => s.trim());
+  const headers = rawHeaders.map(h =>
+    h.replace(/^\uFEFF/, "")  // 去 BOM
+     .trim()
+     .toLowerCase()
+  );
+
   return lines.slice(1).map(line => {
     const cols = line.split(",").map(s => s.trim());
     const row = {};
@@ -135,12 +143,11 @@ function parseCSV(csvText) {
 }
 
 function normalizeRows(rows) {
-  // 允許：term 或 term/weight/enabled
   return rows
     .map(r => ({
-      term: (r.term ?? r.Term ?? "").trim(),
-      weight: Number((r.weight ?? r.Weight ?? "1") || 1),
-      enabled: String((r.enabled ?? r.Enabled ?? "TRUE") || "TRUE").toUpperCase() !== "FALSE"
+      term: (r.term ?? "").trim(),
+      weight: Number((r.weight ?? "1") || 1),
+      enabled: String((r.enabled ?? "TRUE") || "TRUE").toUpperCase() !== "FALSE"
     }))
     .filter(x => x.term && x.enabled && x.weight > 0);
 }
@@ -279,4 +286,5 @@ document.getElementById("btnNone").addEventListener("click", () => {
 });
 </script>
 </body>
+
 </html>
