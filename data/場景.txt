@@ -3,101 +3,190 @@ kitchen
 bedroom  
 bathroom  
 dining room  
-office  
-classroom  
-lecture hall  
-library  
-cafe  
-coffee shop  
-restaurant  
-bar  
-nightclub  
-gym  
-yoga studio  
-swimming pool  
-beach  
-park  
-forest  
-mountain trail  
-rooftop  
-balcony  
-backyard  
+home office  
+guest bedroom  
+basement  
+attic  
+garage  
 front porch  
-street market  
-shopping mall  
-supermarket  
-bookstore  
-museum  
-art gallery  
-concert hall  
-theater stage  
-cinema  
-hospital room  
-dentist clinic  
-pharmacy  
-train station  
-airport terminal  
-subway platform  
-bus stop  
-car interior  
-taxi backseat  
-airplane cabin  
-spaceship cockpit  
-futuristic city street  
-cyberpunk alley  
-medieval castle hall  
-ancient temple  
-Japanese shrine  
-tatami room  
-onsen bathhouse  
-izakaya  
-k-pop dance studio  
-recording studio  
-photo studio  
-fashion runway  
-boxing ring  
-football stadium  
-basketball court  
-tennis court  
-golf course  
-ice skating rink  
-ski slope  
-desert oasis  
-underwater coral reef  
-spaceship corridor  
-virtual reality room  
-abandoned warehouse  
-rooftop party  
-wedding venue  
-church interior  
-mosque courtyard  
-buddhist monastery  
-luxury hotel lobby  
-hostel dorm  
-camping tent  
+backyard patio  
+balcony  
+rooftop terrace  
+swimming pool  
+hot tub area  
+gym room  
+yoga studio  
+home theater  
+kids playroom  
+laundry room  
+walk-in closet  
+hallway  
+staircase  
+elevator interior  
+cafe interior  
+coffee shop counter  
+restaurant dining area  
+fine dining room  
+fast food counter  
+bar counter  
+nightclub dance floor  
+pub booth  
+izakaya seating  
+karaoke private room  
+gym weight area  
+treadmill zone  
+yoga mat space  
+pilates studio  
+swimming pool lane  
+beach shoreline  
+beach volleyball court  
+public park bench  
+picnic area  
+forest trail  
+mountain summit  
+camping site  
+tent interior  
 mountain cabin  
-treehouse  
-lighthouse interior  
+treehouse deck  
+lighthouse top  
 observatory dome  
 science laboratory  
-chemistry classroom  
-physics lecture hall  
-computer server room  
-data center  
+chemistry lab bench  
+physics classroom  
+computer lab  
+server room  
+data center aisle  
 construction site  
-farm barn  
-vineyard  
-greenhouse  
-botanical garden  
+scaffolding platform  
+farm barn interior  
+cow shed  
+greenhouse interior  
+vineyard rows  
+orchard path  
+botanical garden path  
 zoo enclosure  
-aquarium tank  
-pet shop  
-vintage arcade  
-bowling alley  
-karaoke room  
-escape room  
-haunted house  
-prison cell  
-courtroom  
-news studio  
-podcast room  
+aquarium tunnel  
+pet grooming station  
+veterinary clinic  
+bookstore aisle  
+library reading room  
+university lecture hall  
+classroom desk row  
+art classroom  
+music practice room  
+dance studio mirror wall  
+recording studio booth  
+photo studio backdrop  
+fashion runway  
+backstage dressing room  
+boxing ring  
+wrestling mat  
+basketball court  
+tennis court  
+soccer field sideline  
+baseball dugout  
+golf green  
+ice rink  
+ski lift platform  
+snowboard halfpipe  
+desert campsite  
+oasis palm grove  
+underwater coral reef  
+submarine interior  
+spaceship bridge  
+spaceship corridor  
+cryo chamber  
+futuristic metro station  
+cyberpunk street  
+neon alley  
+medieval throne room  
+castle dungeon  
+ancient temple altar  
+Japanese shrine gate  
+tatami tea room  
+ryokan hallway  
+onsen outdoor bath  
+sento public bath  
+wedding chapel  
+church pews  
+mosque prayer hall  
+buddhist meditation hall  
+luxury hotel suite  
+hotel lobby fountain  
+hostel common room  
+dorm bunk bed  
+train compartment  
+high-speed rail seat  
+subway car  
+bus interior  
+airport departure lounge  
+airplane first class  
+airplane economy cabin  
+helicopter cabin  
+yacht deck  
+sailboat cockpit  
+fishing boat  
+hospital operating room  
+hospital ward  
+dentist chair  
+pharmacy counter  
+courtroom bench  
+prison visitation room  
+police interrogation room  
+news anchor desk  
+television studio  
+podcast recording booth  
+conference room  
+boardroom table  
+coworking desk area  
+startup open office  
+factory assembly line  
+warehouse shelf aisle  
+shopping mall atrium  
+department store floor  
+supermarket aisle  
+convenience store counter  
+night market stall  
+street food cart  
+food truck window  
+amusement park ride  
+roller coaster car  
+ferris wheel cabin  
+haunted house corridor  
+escape room puzzle room  
+arcade machine row  
+bowling alley lane  
+billiard table  
+mini golf course  
+go-kart track  
+paintball field  
+laser tag arena  
+virtual reality booth  
+drone racing arena  
+e-sports arena  
+theater stage  
+concert backstage  
+music festival tent  
+outdoor cinema screen  
+drive-in theater car  
+planetarium dome  
+art gallery white wall  
+sculpture garden  
+street art wall  
+graffiti tunnel  
+abandoned factory  
+ruined cathedral  
+ghost town saloon  
+volcano crater rim  
+cave interior  
+hot spring pool  
+waterfall base  
+river raft  
+canyon overlook  
+glacier surface  
+arctic research station  
+tropical island hut  
+desert tent  
+igloo interior  
+windmill interior  
+lighthouse keeper room  
