@@ -1,74 +1,73 @@
-dress
-microdress
-long_dress
-off-shoulder_dress
-strapless_dress
-backless_dress
-halter_dress
-sundress
-sleeveless_dress
-sailor_dress
-summer_dress
-china_dress
-pinafore_dress
-sweater_dress
-wedding_dress
-armored_dress
-frilled_dress
-lace-trimmed_dress
-collared_dress
-fur-trimmed_dress
-layered_dress
-pleated_dress
-taut_dress
-pencil_dress
-impossible_dress
-multicolored_dress
-striped_dress
-checkered_skirt
-plaid_dress
-ribbed_dress
-polka_dot_dress
-plaid_dress
-print_dress
-vertical-striped_dress
-ribbed_dress
-see-through_dress
-skirt
-microskirt
-miniskirt
-skirt_suit
-bikini_skirt
-pleated_skirt
-pencil_skirt
-bubble_skirt
-tutu
-ballgown
-pettiskirt
-showgirl_skirt
-Medium length skirt
-beltskirt
-denim_skirt
-suspender_skirt
-skirt_set
-long_skirt
-summer_long_skirt
-overskirt
-hakama_skirt
-high-waist_skirt
-kimono_skirt
-suspender_long_skirt
-chiffon_skirt
-frilled_skirt
-fur-trimmed_skirt
-lace_skirt
-lace-trimmed_skirt
-ribbon-trimmed_skirt
-layered_skirt
-print_skirt
-multicolored_skirt
-striped_skirt
-vertical-striped_skirt
-plaid_skirt
-flared_skirt
-floral_skirt
+mini skirt  
+maxi skirt  
+midi skirt  
+pencil skirt  
+A-line skirt  
+pleated skirt  
+flared skirt  
+circle skirt  
+wrap skirt  
+high-waisted skirt  
+low-waisted skirt  
+asymmetric skirt  
+slit skirt  
+side slit skirt  
+front slit skirt  
+ruffled skirt  
+tiered skirt  
+layered skirt  
+tulle skirt  
+leather skirt  
+denim skirt  
+jean skirt  
+lace skirt  
+satin skirt  
+velvet skirt  
+sequin skirt  
+plaid skirt  
+tartan skirt  
+checkered skirt  
+striped skirt  
+polka dot skirt  
+floral skirt  
+printed skirt  
+bodycon skirt  
+sheath skirt  
+trumpet skirt  
+mermaid skirt  
+godet skirt  
+gored skirt  
+yoke skirt  
+peplum skirt  
+fringed skirt  
+draped skirt  
+bias-cut skirt  
+straight skirt  
+fitted skirt  
+flowy skirt  
+balloon skirt  
+bubble skirt  
+puffball skirt  
+tulip skirt  
+handkerchief skirt  
+high-low skirt  
+mullet skirt  
+skort  
+culottes skirt  
+palazzo skirt  
+wide-leg skirt  
+straight-leg skirt  
+cargo skirt  
+utility skirt  
+tennis skirt  
+athletic skirt  
+ballet skirt  
+tutu skirt  
+dirndl skirt  
+kilt skirt  
+sari skirt  
+sarong skirt  
+pareo skirt  
+kaftan skirt  
+hula skirt  
+grass skirt  
