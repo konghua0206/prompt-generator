@@ -396,15 +396,15 @@ function init(){
   // overlays open/close
   const openPrompts = () => {
     const p = getPrompts();
-    $('pMain2').value = p.main;
-    $('pNeg2').value = p.neg;
-    $('pChar2').value = p.char;
+    const a = $('pMain2'), b = $('pNeg2'), c = $('pChar2');
+    if (!a || !b || !c) { console.error('Prompt overlay elements missing'); return; }
+    a.value = p.main;
+    b.value = p.neg;
+    c.value = p.char;
     openOverlay('ovPrompts');
   };
   const applyPrompts = () => {
-    getPrompts().main = $('pMain2').value;
-    getPrompts().neg = $('pNeg2').value;
-    getPrompts().char = $('pChar2').value;
+    setPrompts({ main: $('pMain2').value, neg: $('pNeg2').value, char: $('pChar2').value });
     setStatus('提示詞已套用 ✅','ok');
   };
 
