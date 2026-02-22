@@ -149,8 +149,6 @@ renderGroup("boxClothes", GROUPS.clothes);
 renderGroup("boxScene", GROUPS.scene);
 
 
-loadPrefixSettings();
-wirePrefixSettings();
 // ===== 4) 讀檔（有 cache，避免每次都 fetch）=====
 
 // ===== 固定詞（prefix）=====
@@ -166,7 +164,7 @@ function parsePrefixInput(raw) {
 }
 
 function loadPrefixSettings() {
-  const remember = localStorage.getItem(PREFIX_REMEMBER_KEY);
+  const remember = (function(){try{return localStorage.getItem(PREFIX_REMEMBER_KEY);}catch(e){return null;}})();
   const rememberOn = remember === null ? true : (remember === "1");
 
   const rememberCb = document.getElementById("optRememberPrefix");
@@ -176,7 +174,7 @@ function loadPrefixSettings() {
 
   rememberCb.checked = rememberOn;
   if (rememberOn) {
-    input.value = localStorage.getItem(PREFIX_STORAGE_KEY) || "";
+    input.value = (function(){try{return localStorage.getItem(PREFIX_STORAGE_KEY);}catch(e){return null;}})() || "";
   }
 }
 
@@ -187,20 +185,25 @@ function wirePrefixSettings() {
   if (!rememberCb || !input) return;
 
   rememberCb.addEventListener("change", () => {
-    localStorage.setItem(PREFIX_REMEMBER_KEY, rememberCb.checked ? "1" : "0");
+    try { localStorage.setItem(PREFIX_REMEMBER_KEY, rememberCb.checked ? "1" : "0"); } catch (e) {}
     if (!rememberCb.checked) {
-      localStorage.removeItem(PREFIX_STORAGE_KEY);
+      try { localStorage.removeItem(PREFIX_STORAGE_KEY); } catch (e) {}
     } else {
-      localStorage.setItem(PREFIX_STORAGE_KEY, input.value || "");
+      try { localStorage.setItem(PREFIX_STORAGE_KEY, input.value || ""); } catch (e) {}
     }
   });
 
   input.addEventListener("input", () => {
     if (rememberCb.checked) {
-      localStorage.setItem(PREFIX_STORAGE_KEY, input.value || "");
+      try { localStorage.setItem(PREFIX_STORAGE_KEY, input.value || ""); } catch (e) {}
     }
   });
 }
+
+
+// 初始化固定詞設定
+loadPrefixSettings();
+wirePrefixSettings();
 
 
 const CACHE = new Map(); // category -> string[]
