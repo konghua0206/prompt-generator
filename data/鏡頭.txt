@@ -1,0 +1,15 @@
+body facing viewer
+from_side
+from_above
+from_below
+from_back
+dynamic_angle
+cinematic_angle
+dutch angle
+looking_at_another
+looking_at_phone
+looking_at_another
+upper_body
+cowboy_shot
+close-up
+close shot

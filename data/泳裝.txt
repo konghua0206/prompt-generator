@@ -107,3 +107,12 @@ tie-dye bikini
 glitter bikini  
 holographic swimsuit  
 iridescent bikini  
+school_swimsuit
+competition_swimsuit
+casual_one-piece_swimsuit
+front_zipper_swimsuit
+highleg_swimsuit
+one-piece_swimsuit
+slingshot_swimsuit
+shell_bikini
+o-ring_bikini
