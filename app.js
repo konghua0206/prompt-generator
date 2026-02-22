@@ -9,6 +9,30 @@ const MAX_SEEDS = 50;
 
 // ---------------- Helpers ----------------
 const $ = (id) => document.getElementById(id);
+
+const promptsState = {
+  main: "",
+  char: "",
+  neg: "lowres, bad anatomy, bad hands, watermark, text"
+};
+function setPrompts({main, char, neg}){
+  if (typeof main === 'string') promptsState.main = main;
+  if (typeof char === 'string') promptsState.char = char;
+  if (typeof neg === 'string') promptsState.neg = neg;
+  updatePromptPreviews();
+}
+function getPrompts(){
+  return { main: promptsState.main, char: promptsState.char, neg: promptsState.neg };
+}
+function updatePromptPreviews(){
+  const { main, char, neg } = getPrompts();
+  const combined = combinePrompt(main, char);
+  const a = document.getElementById('promptCombinedPreview');
+  const b = document.getElementById('promptNegPreview');
+  if (a) a.textContent = combined || "(empty)";
+  if (b) b.textContent = (neg||"").trim() || "(empty)";
+}
+
 const nowTs = () => new Date().toISOString();
 
 function safeJsonParse(s, fallback){
@@ -69,7 +93,7 @@ function applySettingsSnapshot(s){
 
 function updateSizePresetFromWH(){
   const w = +$('width').value, h = +$('height').value;
-  const presets = { '768x768': [768,768], '512x768':[512,768], '768x512':[768,512], '1024x1024':[1024,1024] };
+  const presets = { '832x1216': [832,1216], '1216x832':[1216,832], '1024x1024':[1024,1024] };
   for (const [k,[pw,ph]] of Object.entries(presets)){
     if (w===pw && h===ph){ $('sizePreset').value = k; return; }
   }
@@ -108,11 +132,20 @@ function renderHistory(){
     img.loading = 'lazy';
     img.addEventListener('click', () => {
       // Load prompts + settings back
-      $('promptMain').value = item.main || '';
-      $('promptChar').value = item.char || '';
-      $('promptNeg').value = item.neg || '';
+      
+      setPrompts({
+        main: item.main || '',
+        char: item.char || '',
+        neg: item.neg || ''
+      });
       applySettingsSnapshot({
         width:item.w, height:item.h, steps:item.steps, cfg:item.cfg, sampler:item.sampler, seed:item.seed, batch:1
+      });
+      updateSizePresetFromWH();
+      $('lastSeed').textContent = String(item.seed ?? '-');
+      setStatus('已從歷史載入設定/提示詞 ✅','ok');
+      window.scrollTo({top:0, behavior:'smooth'});
+
       });
       $('lastSeed').textContent = String(item.seed ?? '-');
       setStatus('已從歷史載入設定/提示詞 ✅','ok');
@@ -176,9 +209,9 @@ function renderPresetList(){
       if (act === 'load'){
         const p = getPresets().find(x => x.name === name);
         if (!p) return;
-        $('promptMain').value = p.prompts?.main || '';
-        $('promptChar').value = p.prompts?.char || '';
-        $('promptNeg').value = p.prompts?.neg || '';
+        getPrompts().main = p.prompts?.main || '';
+        getPrompts().char = p.prompts?.char || '';
+        getPrompts().neg = p.prompts?.neg || '';
         applySettingsSnapshot(p.settings);
         updateSizePresetFromWH();
         setStatus(`已載入 preset：${name} ✅`,'ok');
@@ -240,9 +273,9 @@ async function generate(){
   const token = $('token').value.trim();
   if (!token){ alert('Token required'); return; }
 
-  const main = $('promptMain').value;
-  const charP = $('promptChar').value;
-  const neg = $('promptNeg').value;
+  const main = getPrompts().main;
+  const charP = getPrompts().char;
+  const neg = getPrompts().neg;
 
   const s = settingsSnapshot();
   const combined = combinePrompt(main, charP);
@@ -349,8 +382,8 @@ async function generate(){
 
 // ---------------- Copy combined prompt ----------------
 function copyCombined(){
-  const combined = combinePrompt($('promptMain').value, $('promptChar').value);
-  const neg = $('promptNeg').value.trim();
+  const combined = combinePrompt(getPrompts().main, getPrompts().char);
+  const neg = getPrompts().neg.trim();
   const txt = `PROMPT:\n${combined}\n\nNEGATIVE:\n${neg}`;
   navigator.clipboard.writeText(txt).then(()=>setStatus('Copied ✅','ok'));
 }
@@ -362,15 +395,16 @@ function init(){
 
   // overlays open/close
   const openPrompts = () => {
-    $('pMain2').value = $('promptMain').value;
-    $('pNeg2').value = $('promptNeg').value;
-    $('pChar2').value = $('promptChar').value;
+    const p = getPrompts();
+    $('pMain2').value = p.main;
+    $('pNeg2').value = p.neg;
+    $('pChar2').value = p.char;
     openOverlay('ovPrompts');
   };
   const applyPrompts = () => {
-    $('promptMain').value = $('pMain2').value;
-    $('promptNeg').value = $('pNeg2').value;
-    $('promptChar').value = $('pChar2').value;
+    getPrompts().main = $('pMain2').value;
+    getPrompts().neg = $('pNeg2').value;
+    getPrompts().char = $('pChar2').value;
     setStatus('提示詞已套用 ✅','ok');
   };
 
@@ -408,8 +442,8 @@ function init(){
   $('height').addEventListener('input', updateSizePresetFromWH);
 
   $('btnResetSettings').addEventListener('click', () => {
-    $('sizePreset').value = '768x768';
-    $('width').value = 768; $('height').value = 768;
+    $('sizePreset').value = '832x1216';
+    $('width').value = 832; $('height').value = 1216;
     $('steps').value = 28; $('cfg').value = 11;
     $('sampler').value = 'k_euler_ancestral';
     $('seed').value = -1; $('batch').value = 1;
@@ -428,7 +462,7 @@ function init(){
     const presets = getPresets().filter(p=>p.name !== name);
     presets.unshift({
       name,
-      prompts: { main:$('promptMain').value, char:$('promptChar').value, neg:$('promptNeg').value },
+      prompts: getPrompts(),
       settings: settingsSnapshot(),
       ts: nowTs()
     });

@@ -86,14 +86,20 @@
         <button class="ghost" id="btnOpenHistory">歷史</button>
       </div>
 
-      <label>主提示詞</label>
-      <textarea id="promptMain" rows="4" placeholder="例如：masterpiece, best quality, 1girl, city night, neon lights"></textarea>
+      
+      <label>提示詞摘要（只讀）</label>
+      <div class="row">
+        <div>
+          <div class="hint">Combined Prompt</div>
+          <pre id="promptCombinedPreview" class="mono" style="margin:8px 0 0"></pre>
+        </div>
+        <div>
+          <div class="hint">Negative / UC</div>
+          <pre id="promptNegPreview" class="mono" style="margin:8px 0 0"></pre>
+        </div>
+      </div>
+      <div class="status">編輯提示詞請按上方「提示詞」或底部 Prompt（以疊合面板為唯一入口）。</div>
 
-      <label>人物提示詞（會自動接在主提示詞前面）</label>
-      <textarea id="promptChar" rows="2" placeholder="例如：1girl, silver hair, blue eyes"></textarea>
-
-      <label>負提示詞（UC / Negative）</label>
-      <textarea id="promptNeg" rows="2">lowres, bad anatomy, bad hands, watermark, text</textarea>
 
       <div class="sep"></div>
       <div class="btnbar">
@@ -181,21 +187,20 @@
 
       <label>Size Preset</label>
       <select id="sizePreset">
-        <option value="768x768">768×768</option>
-        <option value="512x768">512×768（直）</option>
-        <option value="768x512">768×512（橫）</option>
-        <option value="1024x1024">1024×1024</option>
+        <option value="832x1216">832×1216（直）</option>
+        <option value="1216x832">1216×832（橫）</option>
+        <option value="1024x1024">1024×1024（方）</option>
         <option value="custom">自訂</option>
       </select>
 
       <div class="row">
         <div>
           <label>Width</label>
-          <input id="width" type="number" min="64" step="64" value="768" />
+          <input id="width" type="number" min="64" step="64" value="832" />
         </div>
         <div>
           <label>Height</label>
-          <input id="height" type="number" min="64" step="64" value="768" />
+          <input id="height" type="number" min="64" step="64" value="1216" />
         </div>
       </div>
 
@@ -212,10 +217,12 @@
 
       <label>Sampler</label>
       <select id="sampler">
-        <option value="k_euler_ancestral">k_euler_ancestral</option>
-        <option value="k_euler">k_euler</option>
-        <option value="k_dpmpp_2m">k_dpmpp_2m</option>
-        <option value="k_dpmpp_sde">k_dpmpp_sde</option>
+        <option value="k_euler_ancestral">Euler Ancestral</option>
+        <option value="k_euler">Euler</option>
+        <option value="k_dpmpp_2s_ancestral">DPM++ 2S Ancestral</option>
+        <option value="k_dpmpp_2m_sde">DPM++ 2M SDE</option>
+        <option value="k_dpmpp_2m">DPM++ 2M</option>
+        <option value="k_dpmpp_sde">DPM++ SDE</option>
       </select>
 
       <div class="row">
