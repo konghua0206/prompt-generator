@@ -55,6 +55,20 @@
             <span>用換行分隔</span>
           </label>
         </div>
+
+        <h4 style="margin:14px 0 8px">固定詞（每次都加在最前面）</h4>
+        <div class="muted" style="margin-bottom:6px">每行一個詞，或用逗號分隔都可以。</div>
+        <input
+          id="fixedPrefix"
+          type="text"
+          placeholder="例如：1girl, masterpiece, best quality"
+          style="width:100%; padding:10px 12px; border-radius:10px; border:1px solid #ccc;"
+        />
+        <label class="pill" style="margin-top:8px">
+          <input type="checkbox" id="optRememberPrefix" checked>
+          <span>記住固定詞</span>
+        </label>
+
       </div>
     </div>
 
@@ -134,7 +148,61 @@ function getSelectedCategories() {
 renderGroup("boxClothes", GROUPS.clothes);
 renderGroup("boxScene", GROUPS.scene);
 
+
+loadPrefixSettings();
+wirePrefixSettings();
 // ===== 4) 讀檔（有 cache，避免每次都 fetch）=====
+
+// ===== 固定詞（prefix）=====
+const PREFIX_STORAGE_KEY = "promptgen_fixed_prefix_v1";
+const PREFIX_REMEMBER_KEY = "promptgen_remember_prefix_v1";
+
+function parsePrefixInput(raw) {
+  // 支援：逗號分隔、或換行分隔
+  return (raw || "")
+    .split(/[\n,]/g)
+    .map(s => s.trim())
+    .filter(Boolean);
+}
+
+function loadPrefixSettings() {
+  const remember = localStorage.getItem(PREFIX_REMEMBER_KEY);
+  const rememberOn = remember === null ? true : (remember === "1");
+
+  const rememberCb = document.getElementById("optRememberPrefix");
+  const input = document.getElementById("fixedPrefix");
+
+  if (!rememberCb || !input) return;
+
+  rememberCb.checked = rememberOn;
+  if (rememberOn) {
+    input.value = localStorage.getItem(PREFIX_STORAGE_KEY) || "";
+  }
+}
+
+function wirePrefixSettings() {
+  const rememberCb = document.getElementById("optRememberPrefix");
+  const input = document.getElementById("fixedPrefix");
+
+  if (!rememberCb || !input) return;
+
+  rememberCb.addEventListener("change", () => {
+    localStorage.setItem(PREFIX_REMEMBER_KEY, rememberCb.checked ? "1" : "0");
+    if (!rememberCb.checked) {
+      localStorage.removeItem(PREFIX_STORAGE_KEY);
+    } else {
+      localStorage.setItem(PREFIX_STORAGE_KEY, input.value || "");
+    }
+  });
+
+  input.addEventListener("input", () => {
+    if (rememberCb.checked) {
+      localStorage.setItem(PREFIX_STORAGE_KEY, input.value || "");
+    }
+  });
+}
+
+
 const CACHE = new Map(); // category -> string[]
 
 async function loadCategory(category) {
@@ -157,6 +225,12 @@ async function generatePrompt() {
 
   const parts = [];
   const report = [];
+
+  // 先加入固定詞（永遠放在最前面）
+  const prefixRaw = document.getElementById("fixedPrefix")?.value || "";
+  const prefixTerms = parsePrefixInput(prefixRaw);
+  for (const p of prefixTerms) parts.push(p);
+
 
   // 依順序載入並抽取
   for (const cat of OUTPUT_ORDER) {
